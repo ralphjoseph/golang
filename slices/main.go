@@ -31,4 +31,18 @@ func main() {
 	fmt.Println("print from index begin to 5", s[:5])
 	fmt.Println("print from index 3 to end", s[3:])
 	fmt.Println("print from index begin to end", s[:])
+
+	//create multidimensional array of varying length
+
+	twod := make([][]int, 4)
+
+	for i := 0; i < 4; i++ {
+		innerlen := i + 1
+		twod[i] = make([]int, innerlen)
+		for j := 0; j < innerlen; j++ {
+			twod[i][j] = i*10 + j
+		}
+	}
+
+	fmt.Println(twod)
 }
